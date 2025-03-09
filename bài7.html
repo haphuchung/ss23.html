@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [2, 4, 6, 1, 8, 9];
+
+        if (numbers.length < 2) {
+            console.log("Không thể tìm số lớn thứ hai");
+        } else {
+            let max = numbers[0];  
+            let secondMax = null;  
+        
+            for (let i = 1; i < numbers.length; i++) {
+                if (numbers[i] > max) {
+                    secondMax = max;
+                    max = numbers[i];
+                } else if (numbers[i] > secondMax || secondMax === null) {
+                    secondMax = numbers[i];
+                }
+            }
+        
+            if (secondMax === null) {
+                console.log("Không có số lớn thứ hai");
+            } else {
+                console.log("Số lớn thứ hai là:", secondMax);
+            }
+        } 
+        alert("Số lớn thứ hai là: " + secondMax);
+    </script>
+</body>
+</html>
